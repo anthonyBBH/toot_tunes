@@ -1,0 +1,1465 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+    background:url('../img/bg.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+#wrapper{
+    width:99.9%;
+    height: 768px;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+
+
+#header{
+    width:189px;
+    height: 121px;
+    margin: 45px 0 0 95px;
+    background-image:url('../img/logo.png');
+    background-size: 100%;
+    background-position: 50% 50%;
+}
+
+#social{
+    width:153px;
+    height: 30px;
+    top:47px;
+    right:0px;
+    position: absolute;
+    background-image:url('../img/social.png');
+    background-size: 100%;
+}
+
+#play{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right:27.5%;
+  top:48%;
+  cursor: pointer;
+}
+
+#tile_wrapper {
+    height: auto;
+    margin: 0 0 0 -512px;
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+    position: absolute;
+    top:33%;
+    left:50%;
+    /* just for demo */
+    min-width: 610px;
+    max-width: 1024px;
+}
+
+.tile1, .tile2, .tile3 {
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.tile2{
+    margin-left: 25px;
+}
+#tile_wrapper :after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+}
+
+
+.fruit, .fruit1, .fruit2, .fruit3, .fruit4, .fruit5, .fruit6{
+    width:90%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    z-index:3;
+    }
+
+
+#apple{
+  width:141px;
+  height: 257px;
+}
+
+#banana{
+  width:193px;
+  height: 257px;
+}
+
+#blueberry{
+  width:100px;
+  height: 257px;
+}
+
+#orange{
+  width:159px;
+  height: 257px;
+}
+
+#raspberry{
+  width:108px;
+  height: 257px;
+}
+
+#watermelon{
+  width:250px;
+  height: 257px;
+}
+
+
+
+
+#bottom_console {
+position: absolute;
+bottom: 0%;
+background: url('../img/bottom_console.png') no-repeat center center;
+width: 99.9%;
+height: 30%;
+background-size: 100% 100%;
+}
+
+
+
+
+
+
+#sounds{
+    display: none;
+}
+
+.animated {
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tada {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    -ms-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    -ms-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.tada {
+  -webkit-animation-name: tada;
+  animation-name: tada;
+}
+
+
+
+.slideExpandUp{
+  animation-name: slideExpandUp;
+  -webkit-animation-name: slideExpandUp;  
+
+  animation-duration: 1.6s; 
+  -webkit-animation-duration: 1.6s;
+
+  animation-timing-function: ease-out;  
+  -webkit-animation-timing-function: ease -out;
+
+  visibility: visible !important; 
+}
+
+@keyframes slideExpandUp {
+  0% { transform: translateY(100%) scaleX(0.95);}
+  30%{ transform: translateY(-8%) scaleX(0.95); } 
+  40%{ transform: translateY(2%) scaleX(0.95);  }
+  50%{ transform: translateY(0%) scaleX(1.1);  }
+  60%{ transform: translateY(0%) scaleX(0.9);  }
+  70%{ transform: translateY(0%) scaleX(1.05); }      
+  80%{ transform: translateY(0%) scaleX(0.95); }
+  90% { transform: translateY(0%) scaleX(1.02); } 
+   100%{ transform: translateY(0%) scaleX(1); }
+}
+
+@-webkit-keyframes slideExpandUp {
+  0% { -webkit-transform: translateY(100%) scaleX(0.95); }
+  30%{ -webkit-transform: translateY(-8%) scaleX(0.95); } 
+  40%{ -webkit-transform: translateY(2%) scaleX(0.95); }
+  50%{ -webkit-transform: translateY(0%) scaleX(1.1); }
+  60%{ -webkit-transform: translateY(0%) scaleX(0.9);}
+  70%{-webkit-transform: translateY(0%) scaleX(1.05); }     
+  80%{ -webkit-transform: translateY(0%) scaleX(0.95); }
+  90%{ -webkit-transform: translateY(0%) scaleX(1.02); }  
+  100%{ -webkit-transform: translateY(0%) scaleX(1);}
+}
+
+
+
+
+
+/* B L U E B E R R Y */
+
+#blueberry_smoke {
+  position: relative;
+  z-index: 3;
+  width: 1px; height: 3px;
+  left: 48%; top: 55px;
+}
+
+#blueberry_smoke .sb0, .sb3, .sb6, .sb9 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/b_smoke_1.png") no-repeat center center;
+}
+
+#blueberry_smoke .sb1, .sb4, .sb7 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/b_smoke_2.png") no-repeat center center;
+}
+
+#blueberry_smoke .sb2, .sb5, .sb8, .sb10 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/b_smoke_3.png") no-repeat center center;
+}
+
+
+
+
+#blueberry_smoke .sb0 {
+  -webkit-animation:   smokeL 0.4s 0s ease;
+  -moz-animation:      smokeL 0.4s 0s ease;
+  -o-animation:        smokeL 0.4s 0s ease;
+  animation:           smokeL 0.4s 0s ease;
+}
+
+#blueberry_smoke .sb1 {
+  -webkit-animation:   smokeR 0.4s 0.1s ease;
+  -moz-animation:      smokeR 0.4s 0.1s ease;
+  -o-animation:        smokeR 0.4s 0.1s ease;
+  animation:           smokeR 0.4s 0.1s ease;
+}
+
+#blueberry_smoke .sb2 {
+  -webkit-animation:  smokeL 0.4s 0.2s ease;
+  -moz-animation:     smokeL 0.4s 0.2s ease;
+  -o-animation:       smokeL 0.4s 0.2s ease;
+  animation:          smokeL 0.4s 0.2s ease;
+}
+
+#blueberry_smoke .sb3 {
+  -webkit-animation:  smokeR 0.4s 0.3s ease;
+  -moz-animation:     smokeR 0.4s 0.3s ease;
+  -o-animation:       smokeR 0.4s 0.3s ease;
+  animation:          smokeR 0.4s 0.3s ease;
+}
+
+#blueberry_smoke .sb4 {
+  -webkit-animation:  smokeL 0.4s 0.4s ease;
+  -moz-animation:     smokeL 0.4s 0.4s ease;
+  -o-animation:       smokeL 0.4s 0.4s ease;
+  animation:          smokeL 0.4s 0.4s ease;
+}
+
+#blueberry_smoke .sb5 {
+  -webkit-animation:  smokeR 0.4s 0.4s ease;
+  -moz-animation:     smokeR 0.4s 0.4s ease;
+  -o-animation:       smokeR 0.4s 0.4s ease;
+  animation:          smokeR 0.4s 0.4s ease;
+}
+
+#blueberry_smoke .sb6 {
+  -webkit-animation:  smokeL 0.4s 0.4s ease;
+  -moz-animation:     smokeL 0.4s 0.4s ease;
+  -o-animation:       smokeL 0.4s 0.4s ease;
+  animation:          smokeL 0.4s 0.4s ease;
+}
+
+#blueberry_smoke .sb7 {
+  -webkit-animation:  smokeR 0.4s 0.4s ease;
+  -moz-animation:     smokeR 0.4s 0.4s ease;
+  -o-animation:       smokeR 0.4s 0.4s ease;
+  animation:          smokeR 0.4s 0.4s ease;
+}
+
+#blueberry_smoke .sb8 {
+  -webkit-animation:  smokeL 0.4s 0.4s ease;
+  -moz-animation:     smokeL 0.4s 0.4s ease;
+  -o-animation:       smokeL 0.4s 0.4s ease;
+  animation:          smokeL 0.4s 0.4s ease;
+}
+
+#blueberry_smoke .sb9 {
+  -webkit-animation:  smokeR 0.4s 0.4s ease;
+  -moz-animation:     smokeR 0.4s 0.4s ease;
+  -o-animation:       smokeR 0.4s 0.4s ease;
+  animation:          smokeR 0.4s 0.4s ease;
+}
+
+
+
+
+/* O R A N G E */
+
+#orange_smoke {
+  position: relative;
+  z-index: 3;
+  width: 1px; height: 3px;
+  left: 48%; top: 55px;
+}
+
+#orange_smoke .so0, .so3, .so6, .so9 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/o_smoke_1.png") no-repeat center center;
+}
+
+#orange_smoke .so1, .so4, .so7 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/o_smoke_2.png") no-repeat center center;
+}
+
+#orange_smoke .so2, .so5, .so8, .so10 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/o_smoke_3.png") no-repeat center center;
+}
+
+
+
+
+#orange_smoke .so0 {
+  -webkit-animation:   smokeL 0.4s 0s ease;
+  -moz-animation:      smokeL 0.4s 0s ease;
+  -o-animation:        smokeL 0.4s 0s ease;
+  animation:           smokeL 0.4s 0s ease;
+}
+
+#orange_smoke .so1 {
+  -webkit-animation:   smokeR 0.4s 0.1s ease;
+  -moz-animation:      smokeR 0.4s 0.1s ease;
+  -o-animation:        smokeR 0.4s 0.1s ease;
+  animation:           smokeR 0.4s 0.1s ease;
+}
+
+#orange_smoke .so2 {
+  -webkit-animation:  smokeL 0.4s 0.2s ease;
+  -moz-animation:     smokeL 0.4s 0.2s ease;
+  -o-animation:       smokeL 0.4s 0.2s ease;
+  animation:          smokeL 0.4s 0.2s ease;
+}
+
+#orange_smoke .so3 {
+  -webkit-animation:  smokeR 0.4s 0.3s ease;
+  -moz-animation:     smokeR 0.4s 0.3s ease;
+  -o-animation:       smokeR 0.4s 0.3s ease;
+  animation:          smokeR 0.4s 0.3s ease;
+}
+
+#orange_smoke .so4 {
+  -webkit-animation:  smokeL 0.4s 0.4s ease;
+  -moz-animation:     smokeL 0.4s 0.4s ease;
+  -o-animation:       smokeL 0.4s 0.4s ease;
+  animation:          smokeL 0.4s 0.4s ease;
+}
+
+#orange_smoke .so5 {
+  -webkit-animation:  smokeR 0.4s 0.15s ease;
+  -moz-animation:     smokeR 0.4s 0.15s ease;
+  -o-animation:       smokeR 0.4s 0.15s ease;
+  animation:          smokeR 0.4s 0.15s ease;
+}
+
+#orange_smoke .so6 {
+  -webkit-animation:  smokeL 0.4s 0.26s ease;
+  -moz-animation:     smokeL 0.4s 0.26s ease;
+  -o-animation:       smokeL 0.4s 0.26s ease;
+  animation:          smokeL 0.4s 0.26s ease;
+}
+
+#orange_smoke .so7 {
+  -webkit-animation:  smokeR 0.4s 0.37s ease;
+  -moz-animation:     smokeR 0.4s 0.37s ease;
+  -o-animation:       smokeR 0.4s 0.37s ease;
+  animation:          smokeR 0.4s 0.37s ease;
+}
+
+#orange_smoke .so8 {
+  -webkit-animation:  smokeL 0.4s 0.19s ease;
+  -moz-animation:     smokeL 0.4s 0.19s ease;
+  -o-animation:       smokeL 0.4s 0.19s ease;
+  animation:          smokeL 0.4s 0.19s ease;
+}
+
+#orange_smoke .so9 {
+  -webkit-animation:  smokeR 0.4s 0.4s ease;
+  -moz-animation:     smokeR 0.4s 0.4s ease;
+  -o-animation:       smokeR 0.4s 0.4s ease;
+  animation:          smokeR 0.4s 0.4s ease;
+}
+
+
+
+
+
+
+
+/* W A T E R M E L O N */
+
+#watermelon_smoke {
+  position: relative;
+  z-index: 3;
+  width: 1px; height: 3px;
+  left: 48%; top: 55px;
+}
+
+#watermelon_smoke .sw0, .sw3, .sw6, .sw9 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/w_smoke_1.png") no-repeat center center;
+}
+
+#watermelon_smoke .sw1, .sw4, .sw7 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/w_smoke_2.png") no-repeat center center;
+}
+
+#watermelon_smoke .sw2, .sw5, .sw8, .sw10 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/w_smoke_3.png") no-repeat center center;
+}
+
+
+
+
+#watermelon_smoke .sw0 {
+  -webkit-animation:   smokeL 0.43s 0s ease;
+  -moz-animation:      smokeL 0.43s 0s ease;
+  -o-animation:        smokeL 0.43s 0s ease;
+  animation:           smokeL 0.43s 0s ease;
+}
+
+#watermelon_smoke .sw1 {
+  -webkit-animation:   smokeR 0.43s 0.1s ease;
+  -moz-animation:      smokeR 0.43s 0.1s ease;
+  -o-animation:        smokeR 0.43s 0.1s ease;
+  animation:           smokeR 0.43s 0.1s ease;
+}
+
+#watermelon_smoke .sw2 {
+  -webkit-animation:  smokeL 0.43s 0.2s ease;
+  -moz-animation:     smokeL 0.43s 0.2s ease;
+  -o-animation:       smokeL 0.43s 0.2s ease;
+  animation:          smokeL 0.43s 0.2s ease;
+}
+
+#watermelon_smoke .sw3 {
+  -webkit-animation:  smokeR 0.43s 0.3s ease;
+  -moz-animation:     smokeR 0.43s 0.3s ease;
+  -o-animation:       smokeR 0.43s 0.3s ease;
+  animation:          smokeR 0.43s 0.3s ease;
+}
+
+#watermelon_smoke .sw4 {
+  -webkit-animation:  smokeL 0.43s 0.4s ease;
+  -moz-animation:     smokeL 0.43s 0.4s ease;
+  -o-animation:       smokeL 0.43s 0.4s ease;
+  animation:          smokeL 0.43s 0.4s ease;
+}
+
+#watermelon_smoke .sw5 {
+  -webkit-animation:  smokeR 0.43s 0.25s ease;
+  -moz-animation:     smokeR 0.43s 0.25s ease;
+  -o-animation:       smokeR 0.43s 0.25s ease;
+  animation:          smokeR 0.43s 0.25s ease;
+}
+
+#watermelon_smoke .sw6 {
+  -webkit-animation:  smokeL 0.43s 0.16s ease;
+  -moz-animation:     smokeL 0.43s 0.16s ease;
+  -o-animation:       smokeL 0.43s 0.16s ease;
+  animation:          smokeL 0.43s 0.16s ease;
+}
+
+#watermelon_smoke .sw7 {
+  -webkit-animation:  smokeR 0.43s 0.27s ease;
+  -moz-animation:     smokeR 0.43s 0.27s ease;
+  -o-animation:       smokeR 0.43s 0.27s ease;
+  animation:          smokeR 0.43s 0.27s ease;
+}
+
+#watermelon_smoke .sw8 {
+  -webkit-animation:  smokeL 0.43s 0.19s ease;
+  -moz-animation:     smokeL 0.43s 0.19s ease;
+  -o-animation:       smokeL 0.43s 0.19s ease;
+  animation:          smokeL 0.43s 0.19s ease;
+}
+
+#watermelon_smoke .sw9 {
+  -webkit-animation:  smokeR 0.43s 0.1s ease;
+  -moz-animation:     smokeR 0.43s 0.1s ease;
+  -o-animation:       smokeR 0.43s 0.1s ease;
+  animation:          smokeR 0.43s 0.1s ease;
+}
+
+
+
+
+/* R A S P B E R R Y */
+
+#raspberry_smoke {
+  position: relative;
+  z-index: 3;
+  width: 1px; height: 3px;
+  left: 48%; top: 55px;
+}
+
+#raspberry_smoke .sr0, .sr3, .sr6, .sr9 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/r_smoke_1.png") no-repeat center center;
+}
+
+#raspberry_smoke .sr1, .sr4, .sr7 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/r_smoke_2.png") no-repeat center center;
+}
+
+#raspberry_smoke .sr2, .sr5, .sr8, .sr10 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/r_smoke_3.png") no-repeat center center;
+}
+
+
+
+
+#raspberry_smoke .sr0 {
+  -webkit-animation:   smokeL 0.4s 0s ease;
+  -moz-animation:      smokeL 0.4s 0s ease;
+  -o-animation:        smokeL 0.4s 0s ease;
+  animation:           smokeL 0.4s 0s ease;
+}
+
+#raspberry_smoke .sr1 {
+  -webkit-animation:   smokeR 0.4s 0.1s ease;
+  -moz-animation:      smokeR 0.4s 0.1s ease;
+  -o-animation:        smokeR 0.4s 0.1s ease;
+  animation:           smokeR 0.4s 0.1s ease;
+}
+
+#raspberry_smoke .sr2 {
+  -webkit-animation:  smokeL 0.4s 0.2s ease;
+  -moz-animation:     smokeL 0.4s 0.2s ease;
+  -o-animation:       smokeL 0.4s 0.2s ease;
+  animation:          smokeL 0.4s 0.2s ease;
+}
+
+#raspberry_smoke .sr3 {
+  -webkit-animation:  smokeR 0.4s 0.3s ease;
+  -moz-animation:     smokeR 0.4s 0.3s ease;
+  -o-animation:       smokeR 0.4s 0.3s ease;
+  animation:          smokeR 0.4s 0.3s ease;
+}
+
+#raspberry_smoke .sr4 {
+  -webkit-animation:  smokeL 0.4s 0.4s ease;
+  -moz-animation:     smokeL 0.4s 0.4s ease;
+  -o-animation:       smokeL 0.4s 0.4s ease;
+  animation:          smokeL 0.4s 0.4s ease;
+}
+
+#raspberry_smoke .sr5 {
+  -webkit-animation:  smokeR 0.4s 0.25s ease;
+  -moz-animation:     smokeR 0.4s 0.25s ease;
+  -o-animation:       smokeR 0.4s 0.25s ease;
+  animation:          smokeR 0.4s 0.25s ease;
+}
+
+#raspberry_smoke .sr6 {
+  -webkit-animation:  smokeL 0.4s 0.16s ease;
+  -moz-animation:     smokeL 0.4s 0.16s ease;
+  -o-animation:       smokeL 0.4s 0.16s ease;
+  animation:          smokeL 0.4s 0.16s ease;
+}
+
+#raspberry_smoke .sr7 {
+  -webkit-animation:  smokeR 0.4s 0.27s ease;
+  -moz-animation:     smokeR 0.4s 0.27s ease;
+  -o-animation:       smokeR 0.4s 0.27s ease;
+  animation:          smokeR 0.4s 0.27s ease;
+}
+
+#raspberry_smoke .sr8 {
+  -webkit-animation:  smokeL 0.4s 0.39s ease;
+  -moz-animation:     smokeL 0.4s 0.39s ease;
+  -o-animation:       smokeL 0.4s 0.39s ease;
+  animation:          smokeL 0.4s 0.39s ease;
+}
+
+#raspberry_smoke .sr9 {
+  -webkit-animation:  smokeR 0.4s 0.1s ease;
+  -moz-animation:     smokeR 0.4s 0.1s ease;
+  -o-animation:       smokeR 0.4s 0.1s ease;
+  animation:          smokeR 0.4s 0.1s ease;
+}
+
+
+
+/* R A S P B E R R Y */
+
+#banana_smoke {
+  position: relative;
+  z-index: 3;
+  width: 1px; height: 3px;
+  left: 40%; top: 45px;
+}
+
+#banana_smoke .sba0, .sba3, .sba6, .sba9 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/ba_smoke_1.png") no-repeat center center;
+}
+
+#banana_smoke .sba1, .sba4, .sba7 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/ba_smoke_2.png") no-repeat center center;
+}
+
+#banana_smoke .sba2, .sba5, .sba8, .sba10 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/ba_smoke_3.png") no-repeat center center;
+}
+
+
+
+
+#banana_smoke .sba0 {
+  -webkit-animation:   smokeL 0.4s 0s ease;
+  -moz-animation:      smokeL 0.4s 0s ease;
+  -o-animation:        smokeL 0.4s 0s ease;
+  animation:           smokeL 0.4s 0s ease;
+}
+
+#banana_smoke .sba1 {
+  -webkit-animation:   smokeR 0.4s 0.1s ease;
+  -moz-animation:      smokeR 0.4s 0.1s ease;
+  -o-animation:        smokeR 0.4s 0.1s ease;
+  animation:           smokeR 0.4s 0.1s ease;
+}
+
+#banana_smoke .sba2 {
+  -webkit-animation:  smokeL 0.4s 0.2s ease;
+  -moz-animation:     smokeL 0.4s 0.2s ease;
+  -o-animation:       smokeL 0.4s 0.2s ease;
+  animation:          smokeL 0.4s 0.2s ease;
+}
+
+#banana_smoke .sba3 {
+  -webkit-animation:  smokeR 0.4s 0.3s ease;
+  -moz-animation:     smokeR 0.4s 0.3s ease;
+  -o-animation:       smokeR 0.4s 0.3s ease;
+  animation:          smokeR 0.4s 0.3s ease;
+}
+
+#banana_smoke .sba4 {
+  -webkit-animation:  smokeL 0.4s 0.4s ease;
+  -moz-animation:     smokeL 0.4s 0.4s ease;
+  -o-animation:       smokeL 0.4s 0.4s ease;
+  animation:          smokeL 0.4s 0.4s ease;
+}
+
+#banana_smoke .sba5 {
+  -webkit-animation:  smokeR 0.4s 0.15s ease;
+  -moz-animation:     smokeR 0.4s 0.15s ease;
+  -o-animation:       smokeR 0.4s 0.15s ease;
+  animation:          smokeR 0.4s 0.15s ease;
+}
+
+#banana_smoke .sba6 {
+  -webkit-animation:  smokeL 0.4s 0.26s ease;
+  -moz-animation:     smokeL 0.4s 0.26s ease;
+  -o-animation:       smokeL 0.4s 0.26s ease;
+  animation:          smokeL 0.4s 0.26s ease;
+}
+
+#banana_smoke .sba7 {
+  -webkit-animation:  smokeR 0.4s 0.37s ease;
+  -moz-animation:     smokeR 0.4s 0.37s ease;
+  -o-animation:       smokeR 0.4s 0.37s ease;
+  animation:          smokeR 0.4s 0.37s ease;
+}
+
+#banana_smoke .sba8 {
+  -webkit-animation:  smokeL 0.4s 0.19s ease;
+  -moz-animation:     smokeL 0.4s 0.19s ease;
+  -o-animation:       smokeL 0.4s 0.19s ease;
+  animation:          smokeL 0.4s 0.19s ease;
+}
+
+#banana_smoke .sba9 {
+  -webkit-animation:  smokeR 0.4s 1s ease;
+  -moz-animation:     smokeR 0.4s 1s ease;
+  -o-animation:       smokeR 0.4s 1s ease;
+  animation:          smokeR 0.4s 1s ease;
+}
+
+
+
+
+
+/* R A S P B E R R Y */
+
+#apple_smoke {
+  position: relative;
+  z-index: 3;
+  width: 1px; height: 3px;
+  left: 40%; top: 65px;
+}
+
+#apple_smoke .sa0, .sa3, .sa6, .sa9 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/a_smoke_1.png") no-repeat center center;
+}
+
+#apple_smoke .sa1, .sa4, .sa7 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/a_smoke_2.png") no-repeat center center;
+}
+
+#apple_smoke .sa2, .sa5, .sa8, .sa10 {
+  width: 31px;
+  height: 31px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transform: scale(.5);
+  background: url("../img/smokes/a_smoke_3.png") no-repeat center center;
+}
+
+
+
+
+#apple_smoke .sa0 {
+  -webkit-animation:   smokeL 0.4s 0s ease;
+  -moz-animation:      smokeL 0.4s 0s ease;
+  -o-animation:        smokeL 0.4s 0s ease;
+  animation:           smokeL 0.4s 0s ease;
+}
+
+#apple_smoke .sa1 {
+  -webkit-animation:   smokeR 0.4s 0.1s ease;
+  -moz-animation:      smokeR 0.4s 0.1s ease;
+  -o-animation:        smokeR 0.4s 0.1s ease;
+  animation:           smokeR 0.4s 0.1s ease;
+}
+
+#apple_smoke .sa2 {
+  -webkit-animation:  smokeL 0.4s 0.2s ease;
+  -moz-animation:     smokeL 0.4s 0.2s ease;
+  -o-animation:       smokeL 0.4s 0.2s ease;
+  animation:          smokeL 0.4s 0.2s ease;
+}
+
+#apple_smoke .sa3 {
+  -webkit-animation:  smokeR 0.4s 0.3s ease;
+  -moz-animation:     smokeR 0.4s 0.3s ease;
+  -o-animation:       smokeR 0.4s 0.3s ease;
+  animation:          smokeR 0.4s 0.3s ease;
+}
+
+#apple_smoke .sa4 {
+  -webkit-animation:  smokeL 0.4s 0.4s ease;
+  -moz-animation:     smokeL 0.4s 0.4s ease;
+  -o-animation:       smokeL 0.4s 0.4s ease;
+  animation:          smokeL 0.4s 0.4s ease;
+}
+
+#apple_smoke .sa5 {
+  -webkit-animation:  smokeR 0.4s 0.15s ease;
+  -moz-animation:     smokeR 0.4s 0.15s ease;
+  -o-animation:       smokeR 0.4s 0.15s ease;
+  animation:          smokeR 0.4s 0.15s ease;
+}
+
+#apple_smoke .sa6 {
+  -webkit-animation:  smokeL 0.4s 0.26s ease;
+  -moz-animation:     smokeL 0.4s 0.26s ease;
+  -o-animation:       smokeL 0.4s 0.26s ease;
+  animation:          smokeL 0.4s 0.26s ease;
+}
+
+#apple_smoke .sa7 {
+  -webkit-animation:  smokeR 0.4s 0.37s ease;
+  -moz-animation:     smokeR 0.4s 0.37s ease;
+  -o-animation:       smokeR 0.4s 0.37s ease;
+  animation:          smokeR 0.4s 0.37s ease;
+}
+
+#apple_smoke .sa8 {
+  -webkit-animation:  smokeL 0.4s 0.29s ease;
+  -moz-animation:     smokeL 0.4s 0.29s ease;
+  -o-animation:       smokeL 0.4s 0.29s ease;
+  animation:          smokeL 0.4s 0.29s ease;
+}
+
+#apple_smoke .sa9 {
+  -webkit-animation:  smokeR 0.4s 0.1s ease;
+  -moz-animation:     smokeR 0.4s 0.1s ease;
+  -o-animation:       smokeR 0.4s 0.1s ease;
+  animation:          smokeR 0.4s 0.1s ease;
+}
+
+
+
+/* Smoke animation */
+@-webkit-keyframes smokeL {
+  0% {
+    -moz-transform:     scale(0.2) translate(0, 0);
+    -ms-transform:      scale(0.2) translate(0, 0);
+    -webkit-transform:  scale(0.2) translate(0, 0);
+    transform:          scale(0.2) translate(0, 0);
+  }
+
+  0.2% {
+    opacity: 1;
+    -moz-transform:    scale(0.2) translate(0, -5px);
+    -ms-transform:     scale(0.2) translate(0, -5px);
+    -webkit-transform: scale(0.2) translate(0, -5px);
+    transform:         scale(0.2) translate(0, -5px);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform:    scale(1) translate(-10px, -130px);
+    -ms-transform:     scale(1) translate(-10px, -130px);
+    -webkit-transform: scale(1) translate(-10px, -130px);
+    transform:         scale(1) translate(-10px, -130px);
+  }
+}
+
+@-moz-keyframes smokeL {
+  0% {
+    -moz-transform:    scale(0.2) translate(0, 0);
+    -ms-transform:     scale(0.2) translate(0, 0);
+    -webkit-transform: scale(0.2) translate(0, 0);
+    transform:         scale(0.2) translate(0, 0);
+  }
+
+  0.2% {
+    opacity: 1;
+    -moz-transform:    scale(0.2) translate(0, -5px);
+    -ms-transform:     scale(0.2) translate(0, -5px);
+    -webkit-transform: scale(0.2) translate(0, -5px);
+    transform:         scale(0.2) translate(0, -5px);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform:    scale(1) translate(-10px, -130px);
+    -ms-transform:     scale(1) translate(-10px, -130px);
+    -webkit-transform: scale(1) translate(-10px, -130px);
+    transform:         scale(1) translate(-10px, -130px);
+  }
+}
+@-o-keyframes smokeL {
+  0% {
+    -moz-transform:    scale(0.2) translate(0, 0);
+    -ms-transform:     scale(0.2) translate(0, 0);
+    -webkit-transform: scale(0.2) translate(0, 0);
+    transform:         scale(0.2) translate(0, 0);
+  }
+
+  0.2% {
+    opacity: 1;
+    -moz-transform:    scale(0.2) translate(0, -5px);
+    -ms-transform:     scale(0.2) translate(0, -5px);
+    -webkit-transform: scale(0.2) translate(0, -5px);
+    transform:         scale(0.2) translate(0, -5px);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform:    scale(1) translate(-10px, -130px);
+    -ms-transform:     scale(1) translate(-10px, -130px);
+    -webkit-transform: scale(1) translate(-10px, -130px);
+    transform:         scale(1) translate(-10px, -130px);
+  }
+}
+@keyframes smokeL {
+  0% {
+    -moz-transform:    scale(0.2) translate(0, 0);
+    -ms-transform:     scale(0.2) translate(0, 0);
+    -webkit-transform: scale(0.2) translate(0, 0);
+    transform:         scale(0.2) translate(0, 0);
+  }
+
+  0.2% {
+    opacity: 1;
+    -moz-transform:    scale(0.2) translate(0, -5px);
+    -ms-transform:     scale(0.2) translate(0, -5px);
+    -webkit-transform: scale(0.2) translate(0, -5px);
+    transform:         scale(0.2) translate(0, -5px);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform:    scale(1) translate(-10px, -130px);
+    -ms-transform:     scale(1) translate(-10px, -130px);
+    -webkit-transform: scale(1) translate(-10px, -130px);
+    transform:         scale(1) translate(-10px, -130px);
+  }
+}
+@-webkit-keyframes smokeR {
+  0% {
+    -moz-transform:    scale(0.2) translate(0, 0);
+    -ms-transform:     scale(0.2) translate(0, 0);
+    -webkit-transform: scale(0.2) translate(0, 0);
+    transform:         scale(0.2) translate(0, 0);
+  }
+
+  0.2% {
+    opacity: 1;
+    -moz-transform:    scale(0.2) translate(0, -5px);
+    -ms-transform:     scale(0.2) translate(0, -5px);
+    -webkit-transform: scale(0.2) translate(0, -5px);
+    transform:         scale(0.2) translate(0, -5px);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform:    scale(1) translate(10px, -130px);
+    -ms-transform:     scale(1) translate(10px, -130px);
+    -webkit-transform: scale(1) translate(10px, -130px);
+    transform:         scale(1) translate(10px, -130px);
+  }
+}
+@-moz-keyframes smokeR {
+  0% {
+    -moz-transform:    scale(0.2) translate(0, 0);
+    -ms-transform:     scale(0.2) translate(0, 0);
+    -webkit-transform: scale(0.2) translate(0, 0);
+    transform:         scale(0.2) translate(0, 0);
+  }
+
+  0.2% {
+    opacity: 1;
+    -moz-transform:    scale(0.2) translate(0, -5px);
+    -ms-transform:     scale(0.2) translate(0, -5px);
+    -webkit-transform: scale(0.2) translate(0, -5px);
+    transform:         scale(0.2) translate(0, -5px);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform:    scale(1) translate(10px, -130px);
+    -ms-transform:     scale(1) translate(10px, -130px);
+    -webkit-transform: scale(1) translate(10px, -130px);
+    transform:         scale(1) translate(10px, -130px);
+  }
+}
+@-o-keyframes smokeR {
+  0% {
+    -moz-transform:    scale(0.2) translate(0, 0);
+    -ms-transform:     scale(0.2) translate(0, 0);
+    -webkit-transform: scale(0.2) translate(0, 0);
+    transform:         scale(0.2) translate(0, 0);
+  }
+
+  0.2% {
+    opacity: 1;
+    -moz-transform:    scale(0.2) translate(0, -5px);
+    -ms-transform:     scale(0.2) translate(0, -5px);
+    -webkit-transform: scale(0.2) translate(0, -5px);
+    transform:         scale(0.2) translate(0, -5px);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform:    scale(1) translate(10px, -130px);
+    -ms-transform:     scale(1) translate(10px, -130px);
+    -webkit-transform: scale(1) translate(10px, -130px);
+    transform:         scale(1) translate(10px, -130px);
+  }
+}
+@keyframes smokeR {
+  0% {
+    -moz-transform:    scale(0.2) translate(0, 0);
+    -ms-transform:     scale(0.2) translate(0, 0);
+    -webkit-transform: scale(0.2) translate(0, 0);
+    transform:         scale(0.2) translate(0, 0);
+  }
+
+  0.2% {
+    opacity: 1;
+    -moz-transform:    scale(0.2) translate(0, -5px);
+    -ms-transform:     scale(0.2) translate(0, -5px);
+    -webkit-transform: scale(0.2) translate(0, -5px);
+    transform:         scale(0.2) translate(0, -5px);
+  }
+
+
+  100% {
+    opacity: 0;
+    -moz-transform:    scale(1) translate(10px, -130px);
+    -ms-transform:     scale(1) translate(10px, -130px);
+    -webkit-transform: scale(1) translate(10px, -130px);
+    transform:         scale(1) translate(10px, -130px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+#sounds{
+    display: none;
+}
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
